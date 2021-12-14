@@ -8,10 +8,10 @@ def webhook():
   url = "https://webexapis.com/v1/messages"
   data = json.dumps({
     "roomId": "Y2lzY29zcGFyazovL3VzL1JPT00vYzg2ZjljMDAtNTY5Yi0xMWVjLThjNmUtYjE2MmM5MjUxYmVl",
-    "text": "¡Recibimos un webhook!"
+    "text": "¡Feliz navidad!"
   })
   headers = {
-    "Authorization": "Bearer NTc4OGM1YTUtMDNlYy00MjE0LWI3YzEtYTEyOTk5ODYwZGUxODE5Mjg5MzEtYTc1_PF84_2a001399-4e85-4adc-b568-32f8032f2ae7",
+    "Authorization": "Bearer " + os.environ["WEBEX_TEAMS_ACCESS_TOKEN"],
     "Content-Type": "application/json"
   }
   response = requests.post(url, headers=headers, data=data)

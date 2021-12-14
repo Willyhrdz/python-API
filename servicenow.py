@@ -3,8 +3,8 @@ import json
 import base64
 
 url = "https://<instance>.service-now.com/api/now/table/incident"
-username = "admin"
-password = "KE54WJ7Bas"
+username = os.environ["SERVICENOW_USERNAME"]
+password = os.environ["SERVICENOW_PASSWORD"]
 room_id = "Y2lzY29zcGFyazovL3VzL1JPT00vYzg2ZjljMDAtNTY5Yi0xMWVjLThjNmUtYjE2MmM5MjUxYmVl"
 
 payload = {

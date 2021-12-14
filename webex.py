@@ -9,7 +9,7 @@ payload = {
 }
 data = json.dumps(payload)
 headers = {
-"Authorization": "Bearer NTdhNjRmODgtZjhjZC00ZjVkLWE2YmItMWU2MDM2ODBhODZhNDhkMGUxODUtM2Ri_PF84_2a001399-4e85-4adc-b568-32f8032f2ae7" ,
+"Authorization": "Bearer " + os.environ["WEBEX_TEAMS_ACCESS_TOKEN"] ,
 "Content-Type": "application/json"
 }
 response = requests.post(url, headers=headers, data=data)
